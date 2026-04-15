@@ -85,7 +85,7 @@ export type AnimeKaiEpisode = AnimeKaiInfo["episodes"][number];
 export interface AnimeKaiServer {
   name: string;
   url: string;
-  isDub: boolean;
+  type: "hardsub" | "softsub" | "dub";
   intro: { start: number; end: number };
   outro: { start: number; end: number };
 }
