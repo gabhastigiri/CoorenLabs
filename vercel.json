@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "env": {
+    "PUPPETEER_SKIP_DOWNLOAD": "1"
+  },
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/api/index" }
+  ],
+  "functions": {
+    "api/index.ts": {
+      "maxDuration": 60
+    }
+  }
+}

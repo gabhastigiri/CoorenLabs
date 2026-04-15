@@ -15,7 +15,7 @@ export const MOCK_DATA = {
             servers: [{ id: "server-1", name: "Server 1" }]
         },
         toonstream: {
-            home: { featured: [], recent: [] },
+            home: { main: [], sidebar: [], lastEpisodes: [] },
             search: { results: [], totalPages: 1 },
             info: { id: "test-slug", title: "Test Toon", description: "Synopsis", episodes: [] },
             sources: { sources: [], subtitles: [] }
@@ -49,20 +49,20 @@ export const MOCK_DATA = {
     },
     movieTv: {
         primesrc: {
-            sources: { sources: [{ url: "https://example.com/stream.m3u8", quality: "auto", isM3U8: true }], subtitles: [] }
+            sources: [{ name: "TestServer", sources: [{ url: "https://example.com/stream.m3u8", dub: "", type: "hls" as const }], subtitles: [] }]
         },
         yflix: {
-            home: { trending: [], latest: [] },
+            home: { featured: [], top10: [], recommended: {}, sliders: [] },
             search: { results: [] }
         },
         himovies: {
-            home: { trending: [], latestMovies: [], latestTv: [] },
+            home: { trending: { Movies: [], Tv: [] }, recentReleases: { Movies: [], Tv: [] }, upcoming: [] },
             search: { results: [{ id: "movie-1", title: "Test Movie", type: "movie", poster: "https://example.com/poster.jpg" }] },
             info: { id: "movie-1", title: "Test Movie", description: "Synopsis", cast: [], genres: [], episodes: [] },
             sources: { sources: [], subtitles: [] }
         },
         flixhq: {
-            home: { trending: [], latestMovies: [], latestTv: [] },
+            home: { featured: [], trending: { Movies: [], Tv: [] }, recentReleases: { Movies: [], Tv: [] }, upcoming: [] },
             search: { results: [] },
             info: { id: "flix-1", title: "Flix Test", episodes: [] },
             sources: { sources: [], subtitles: [] }
